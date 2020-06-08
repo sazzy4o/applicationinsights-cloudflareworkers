@@ -1,0 +1,28 @@
+{
+  "name": "applicationinsights-cloudflareworkers",
+  "version": "0.0.13",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sazzy4o/applicationinsights-cloudflareworkers.git"
+  },
+  "keywords": [
+    "cloudflareworkers",
+    "applicationinsights",
+    "cloudflare"
+  ],
+  "author": "Spencer von der Ohe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sazzy4o/applicationinsights-cloudflareworkers/issues"
+  },
+  "homepage": "https://github.com/sazzy4o/applicationinsights-cloudflareworkers#readme",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}

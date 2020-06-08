@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"declaration": true,
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"lib": ["esnext", "webworker"],
+		"sourceMap": true,
+		"alwaysStrict": true,
+		"allowJs": true,
+		"checkJs": true
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+	],
+}
