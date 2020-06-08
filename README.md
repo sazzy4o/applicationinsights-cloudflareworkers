@@ -9,7 +9,7 @@ npm i --save applicationinsights-cloudflareworkers
 ```
 
 Sample code:
-```
+```ts
 import { ApplicationInsights, RequestData } from 'applicationinsights-cloudflareworkers'
 
 // This interface is not very nice I will allow you to set properties in constuctor in next version
