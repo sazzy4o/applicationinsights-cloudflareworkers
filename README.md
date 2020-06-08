@@ -13,16 +13,16 @@ Sample code:
 import { ApplicationInsights, RequestData } from 'applicationinsights-cloudflareworkers'
 
 // This interface is not very nice I will allow you to set properties in constuctor in next version
-const requestT = new RequestData()
-requestT.name = 'Test'
-requestT.success = true
-requestT.url = 'https://example.com'
-requestT.id = '15fadc35-65b2-41da-b86f-998dcb7489e3'
-requestT.properties = {
+const requestTest = new RequestData()
+requestTest.name = 'Test'
+requestTest.success = true
+requestTest.url = 'https://example.com'
+requestTest.id = '15fadc35-65b2-41da-b86f-998dcb7489e3'
+requestTest.properties = {
     anyName: 'anyValue',
 }
-requestT.duration = '00.00:00:10.000000'
-requestT.responseCode = '200'
+requestTest.duration = '00.00:00:10.000000'
+requestTest.responseCode = '200'
 
 const ai = new ApplicationInsights({
     context: {
@@ -32,13 +32,13 @@ const ai = new ApplicationInsights({
 })
 
 // Pass in AvailabilityData, EventData, ExceptionData, MessageData, MetricData or RequestData (havn't tested all)
-ai.trackData(requestT, 'RequestData')
+ai.trackData(requestTest, 'RequestData')
 
-const res = await ai.flush() // Flush is not automatic you need to call
+const res = await ai.flush() // Flush is not automatic. You need to call
 
 // After flush it take ~5 mins before you will see in application insights
 
-console.log(`Status: ${res.status}`) // See response for errors is code is not 200
+console.log(`Status: ${res.status}`) // See response for errors if code is not 200
 ```
 In application insights you will see:
 ![Request Application Insights](./doc/RequestApplicationInsights.png?raw=true)
