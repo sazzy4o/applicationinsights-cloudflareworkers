@@ -41,6 +41,6 @@ const res = await ai.flush() // Flush is not automatic you need to call
 console.log(`Status: ${res.status}`) // See response for errors is code is not 200
 ```
 In application insights you will see:
-[Request Application Insights](doc/RequestApplicationInsights.png)
+[Request Application Insights](doc/RequestApplicationInsights.png?raw=true)
 
 I am open to pull requests
