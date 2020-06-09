@@ -36,7 +36,7 @@ ai.trackData(requestTest, 'RequestData')
 
 const res = await ai.flush() // Flush is not automatic. You need to call
 
-// After flush it take ~5 mins before you will see in application insights
+// After flush it takes ~5 mins before you will see in application insights
 
 console.log(`Status: ${res.status}`) // See response for errors if code is not 200
 ```
