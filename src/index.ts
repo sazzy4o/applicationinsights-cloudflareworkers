@@ -1,5 +1,7 @@
 export {ApplicationInsights, ApplicationInsightsOptions} from './ApplicationInsights'
 
+export {DataSanitizer} from './DataSanitizer'
+
 export {AvailabilityData} from './types/AvailabilityData'
 export {Base} from './types/Base'
 export {ContextTagKeys} from './types/ContextTagKeys'

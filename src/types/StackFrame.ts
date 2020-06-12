@@ -7,6 +7,10 @@
  */
 export class StackFrame {
 
+    public static regex = /^([\s]+at)?(.*?)(\@|\s\(|\s)([^\(\@\n]+):([0-9]+):([0-9]+)(\)?)$/;
+    public static baseSize = 58; // '{"method":"","level":,"assembly":"","fileName":"","line":}'.length
+    public sizeInBytes: number | undefined = 0;
+
     /**
      * Level in the call stack. For the long stacks SDK may not report every function in a call stack.
      */
@@ -32,6 +36,30 @@ export class StackFrame {
      */
     public line: number;
 
-    constructor() {
+    constructor(sourceFrame: string, level: number) {
+
+        // Not converting this to CoreUtils.isString() as typescript uses this logic to "understand" the different
+        // types for the 2 different code paths
+        const frame: string = sourceFrame;
+        this.level = level;
+        this.method = "<no_method>";
+        this.assembly = frame.trim();
+        this.fileName = "";
+        this.line = 0;
+        const matches = frame.match(StackFrame.regex);
+        if (matches && matches.length >= 5) {
+            this.method = matches[2].trim() || this.method;
+            this.fileName = matches[4].trim();
+            this.line = parseInt(matches[5]) || 0;
+        }
+
+        this.sizeInBytes += this.method.length;
+        this.sizeInBytes += this.fileName.length;
+        this.sizeInBytes += this.assembly.length;
+
+        // todo: these might need to be removed depending on how the back-end settles on their size calculation
+        this.sizeInBytes += StackFrame.baseSize;
+        this.sizeInBytes += this.level.toString().length;
+        this.sizeInBytes += this.line.toString().length;
     }
 }

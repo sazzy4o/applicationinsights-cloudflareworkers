@@ -16,17 +16,19 @@ export class ApplicationInsights{
         this.context = options.context || {}
     }
 
-    trackData(data: Domain, type?:string){
-        const envelope = new Envelope();
-        envelope.data = {
-            baseType: type || data.constructor.name,
-            baseData: data
-        }
-        envelope.time = new Date().toISOString();
+    trackData(baseData: Domain, type?:string){
+        const baseType = type || baseData.constructor.name
         const ikeySimple = this.ikey.replace(/-/g,'')
-        envelope.name = `Microsoft.ApplicationInsights.${ikeySimple}.${envelope.data.baseType}`
-        envelope.iKey = this.ikey
-        envelope.tags = this.context
+        const envelope = new Envelope({
+            data:{
+                baseType,
+                baseData
+            },
+            time:new Date().toISOString(),
+            name: `Microsoft.ApplicationInsights.${ikeySimple}.${baseType}`,
+            iKey: this.ikey,
+            tags: this.context
+        });
         this.envelopes.push(envelope)
     }
 
