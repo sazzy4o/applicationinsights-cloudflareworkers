@@ -8,6 +8,4 @@
  */
 export class Domain {
 
-    constructor() {
-    }
 }

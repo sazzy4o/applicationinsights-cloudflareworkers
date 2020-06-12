@@ -6,7 +6,7 @@
  * Identifies the source of the dependency.
  */
 export enum DependencySourceType {
-    Undefined = 0,
-    Aic = 1,
-    Apmc = 2,
+	Undefined = 0,
+	Aic = 1,
+	Apmc = 2,
 }
