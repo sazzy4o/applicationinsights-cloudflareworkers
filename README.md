@@ -12,17 +12,17 @@ Sample code:
 ```ts
 import { ApplicationInsights, RequestData } from 'applicationinsights-cloudflareworkers'
 
-// This interface is not very nice I will allow you to set properties in constuctor in next version
-const requestTest = new RequestData()
-requestTest.name = 'Test'
-requestTest.success = true
-requestTest.url = 'https://example.com'
-requestTest.id = '15fadc35-65b2-41da-b86f-998dcb7489e3'
-requestTest.properties = {
-    anyName: 'anyValue',
-}
-requestTest.duration = '00.00:00:10.000000'
-requestTest.responseCode = '200'
+const requestTest = new RequestData({
+    name: 'Test',
+    success: true,
+    url: 'https://example.com',
+    id: '15fadc35-65b2-41da-b86f-998dcb7489e3',
+    properties: {
+        anyName: 'anyValue',
+    },
+    duration: '00.00:00:10.000000',
+    responseCode: '200',
+})
 
 const ai = new ApplicationInsights({
     context: {
@@ -31,16 +31,19 @@ const ai = new ApplicationInsights({
     instrumentationKey: 'a08f3f2d-9884-4437-b6ec-c835d3d58d82', // Replace with your own instrumentationKey
 })
 
-// Pass in AvailabilityData, EventData, ExceptionData, MessageData, MetricData or RequestData (havn't tested all)
-ai.trackData(requestTest, 'RequestData')
+// Pass in AvailabilityData, EventData, ExceptionData, MessageData, MetricData, PageViewPerfData, RemoteDependencyData or RequestData
+ai.trackData(requestTest, 'RequestData') // type (second) argument might be required if you minify your code(unminified it can be inferred)
 
-const res = await ai.flush() // Flush is not automatic. You need to call
+const res = await ai.flush() // Flush is not automatic. You need to call .flush()
 
 // After flush it takes ~5 mins before you will see in application insights
 
 console.log(`Status: ${res.status}`) // See response for errors if code is not 200
 ```
+For more examples see the [test folder](./test/)
+
 In application insights you will see:
 ![Request Application Insights](./doc/RequestApplicationInsights.png?raw=true)
+![Request Application Insights More Info](./doc/RequestApplicationInsights2.png?raw=true)
 
 I am open to pull requests
