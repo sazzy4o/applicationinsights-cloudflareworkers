@@ -1,4 +1,6 @@
 doc/
+src/
+dist/test/
 test/
 testy.json
 .eslintrc.js
