@@ -19,6 +19,12 @@ export class ApplicationInsights {
 		this.context = options.context || {}
 	}
 
+	/**
+	 * Tracks an event, but does not send immediately.
+	 * Call flush to send immediately.
+	 * If you minify your code `type` might not be able to be infered.
+	 @param type might be required if you are minifying your code
+	*/
 	trackData(baseData: Domain, type?:string) {
 		const baseType = type || baseData.constructor.name
 		const ikeySimple = this.ikey.replace(/-/g, '')
@@ -35,6 +41,9 @@ export class ApplicationInsights {
 		this.envelopes.push(envelope)
 	}
 
+	/**
+	 * Sends all tracked items to application insights
+	*/
 	async flush() {
 		return fetch('https://dc.services.visualstudio.com/v2/track', {
 			method: 'POST',

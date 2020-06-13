@@ -13,12 +13,12 @@ interface AvailabilityDataInterface { /**
 	/**
 	 * Name of the test that these availability results represent.
 	 */
-	name: string;
+	name?: string;
 
 	/**
 	 * Duration in format: DD.HH:MM:SS.MMMMMM. Must be less than 1000 days.
 	 */
-	duration?: string;
+	duration: string;
 
 	/**
 	 * Success flag.

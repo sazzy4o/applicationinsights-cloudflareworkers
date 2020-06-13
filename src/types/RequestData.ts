@@ -9,7 +9,7 @@ interface RequestDataInterface{
 	/**
 	 * Identifier of a request call instance. Used for correlation between request and other telemetry items.
 	 */
-	id?: string;
+	id: string;
 
 	/**
 	 * Source of the request. Examples are the instrumentation key of the caller or the ip address of the caller.
@@ -19,12 +19,12 @@ interface RequestDataInterface{
 	/**
 	 * Name of the request. Represents code path taken to process request. Low cardinality value to allow better grouping of requests. For HTTP requests it represents the HTTP method and URL path template like 'GET /values/{id}'.
 	 */
-	name: string;
+	name?: string;
 
 	/**
 	 * Response code of the request.
 	 */
-	responseCode?: string;
+	responseCode: string;
 
 	/**
 	 * Indication of successfull or unsuccessfull call.
@@ -34,7 +34,7 @@ interface RequestDataInterface{
 	/**
 	 * Duration of the request in DD.HH:MM:SS.MMMMMM format.
 	 */
-	duration?: string;
+	duration: string;
 
 	/**
 	 * Request URL with all query string parameters.
