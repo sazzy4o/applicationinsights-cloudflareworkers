@@ -4,9 +4,33 @@ Note: Still a work in progress. This package might still have breaking changes
 
 Provides application insights functionality in cloudflare workers
 
+## Install
+
 ```
 npm i --save applicationinsights-cloudflareworkers
 ```
+
+## Webpack
+If you are using webpack you need a plugin to load package properly (there is an issue with how webpack handles .mjs files).
+
+```
+npm i --save-dev webpack-modules
+```
+
+```js
+// Add this to your webpack config file
+const WebpackModules = require('webpack-modules');
+ 
+module.exports = {
+  // ...
+  plugins: [
+    new WebpackModules()
+  ]
+}
+```
+
+
+## Examples
 
 Sample code:
 ```ts
@@ -46,4 +70,6 @@ In application insights you will see:
 ![Request Application Insights](./doc/RequestApplicationInsights.png?raw=true)
 ![Request Application Insights More Info](./doc/RequestApplicationInsights2.png?raw=true)
 
-I am open to pull requests
+## Contributing
+
+I am open to pull requests. Please summarize the changes you make. If you have large changes please open an issue, so we can discuss.
