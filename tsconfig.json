@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "ESNext",
+		"module": "CommonJS",
 		"declaration": true,
 		"moduleResolution": "node",
-		"outDir": "dist",
+		"outDir": "dist/cjs",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"lib": ["esnext", "webworker"],

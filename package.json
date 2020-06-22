@@ -1,12 +1,16 @@
 {
 	"name": "applicationinsights-cloudflareworkers",
-	"version": "0.1.9",
+	"version": "0.2.1",
 	"description": "",
-	"type": "module",
-	"main": "dist/src/index.js",
-	"types": "dist/src/index.d.ts",
+	"main": "./dist/cjs/src/index.js",
+	"module": "./dist/mjs/src/index.mjs",
+	"types": "./dist/cjs/src/index.d.ts",
 	"scripts": {
-		"prepack": "tsc",
+		"compile": "npm run compile-cjs && npm run compile-mjs",
+		"compile-cjs": "tsc",
+		"compile-mjs": "tsc --outDir dist/mjs -m ESNext && node node_modules/renamer/bin/cli.js --find \"/\\.js/\" --replace \".mjs\" \"dist/mjs/**\"",
+		"clean": "rd /s /q dist || (exit 0) || rm -rf dist",
+		"prepack": "npm run clean && npm run compile",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -31,6 +35,7 @@
 		"eslint-config-airbnb-typescript": "^6.3.1",
 		"eslint-plugin-import": "^2.18.2",
 		"node-fetch": "^2.6.0",
+		"renamer": "^2.0.1",
 		"testyts": "^1.0.1",
 		"tslint": "^5.5.0",
 		"tslint-config-standard": "^6.0.1",
