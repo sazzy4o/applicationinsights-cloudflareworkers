@@ -72,4 +72,4 @@ In application insights you will see:
 
 ## Contributing
 
-I am open to pull requests. Please summarize the changes you make. If you have large changes please open an issue, so we can discuss.
+I am open to pull requests. Please summarize the changes you make. If you have large changes please open an issue, so we can discuss before you start working on the changes.
