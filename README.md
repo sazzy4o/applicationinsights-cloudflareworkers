@@ -14,7 +14,7 @@ npm i --save applicationinsights-cloudflareworkers
 
 If you are using webpack you might need change config to load package properly.
 
-### Alternative 1 (Recommended)
+#### Alternative 1 (Recommended)
 Use `webpack-modules` plugin
 
 ```
@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-### Alternative 2
+#### Alternative 2
 Change `mainFields` setting (with my cause issues with other dependencies)
 
 ```js
