@@ -11,7 +11,11 @@ npm i --save applicationinsights-cloudflareworkers
 ```
 
 ## Webpack
-If you are using webpack you need a plugin to load package properly (there is an issue with how webpack handles .mjs files).
+
+If you are using webpack you might need change config to load package properly.
+
+### Alternative 1 (Recommended)
+Use `webpack-modules` plugin
 
 ```
 npm i --save-dev webpack-modules
@@ -29,6 +33,17 @@ module.exports = {
 }
 ```
 
+### Alternative 2
+Change `mainFields` setting (with my cause issues with other dependencies)
+
+```js
+module.exports = {
+  //...
+  resolve: {
+    mainFields: ['module', 'main']
+  }
+};
+```
 
 ## Examples
 
