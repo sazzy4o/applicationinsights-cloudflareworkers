@@ -126,6 +126,10 @@ export class DataSanitizer {
 					} catch (e) {
 						console.log(e) // Not thrown so you don't crash cloudflare function
 					}
+				} else if (typeof value === 'function') {
+					// Skip serialization of function (same behavior as JSON.stringify)
+					// eslint-disable-next-line no-continue
+					continue
 				}
 				value = DataSanitizer.sanitizeString(value, DataSanitizer.MAX_PROPERTY_LENGTH)
 				prop = DataSanitizer.sanitizeKeyAndAddUniqueness(prop, tempProps)
