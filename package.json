@@ -1,6 +1,6 @@
 {
 	"name": "applicationinsights-cloudflareworkers",
-	"version": "0.2.9",
+	"version": "0.2.10",
 	"description": "",
 	"main": "./dist/cjs/src/index.js",
 	"module": "./dist/mjs/src/index.mjs",
