@@ -69,7 +69,7 @@ export class ApplicationInsights {
 	}
 
 	// Function to parse the connection string
-	private static parseConnectionString(connectionString: string): ApplicationInsightsConnection {
+	static parseConnectionString(connectionString: string): ApplicationInsightsConnection {
 		// Split the connection string by semicolon
 		const parts = connectionString.split(';').filter(part => part.trim() !== '');
 
