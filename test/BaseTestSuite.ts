@@ -16,7 +16,7 @@ export class BaseTestSuite {
 			context: {
 				'ai.operation.id': 'f523edf9-30dc-4ca7-8d37-6bfc2ed287d7',
 			},
-			instrumentationKey: 'a08f3f2d-9884-4437-b6ec-c835d3d58d82', // Replace with your own instrumentationKey
+			connection: {instrumentationKey: 'a08f3f2d-9884-4437-b6ec-c835d3d58d82'}
 		})
 		this.successResultString = '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
 	}
