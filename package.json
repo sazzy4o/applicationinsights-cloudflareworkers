@@ -29,6 +29,7 @@
 	},
 	"homepage": "https://github.com/H-Finch-404/applicationinsights-cloudflareworkers#readme",
 	"devDependencies": {
+		"@types/node": "^20.14.10",
 		"@typescript-eslint/eslint-plugin": "^2.7.0",
 		"@typescript-eslint/parser": "2.15.0",
 		"eslint": "^6.8.0",
