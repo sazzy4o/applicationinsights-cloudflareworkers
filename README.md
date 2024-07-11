@@ -1,6 +1,6 @@
 # Application Insights Cloudflareworkers
 
-*This is a fork that adds rudimentary connection string support*
+***This is a fork that adds rudimentary connection string support***
 
 Note: Still a work in progress. This package might still have breaking changes
 
