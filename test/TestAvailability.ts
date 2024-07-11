@@ -7,8 +7,6 @@ import { AvailabilityData } from '../src'
 
 @TestSuite()
 export class TestAvailability extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalAvailability() {
 		const request = new AvailabilityData({

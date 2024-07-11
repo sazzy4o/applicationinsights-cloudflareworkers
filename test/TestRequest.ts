@@ -7,8 +7,6 @@ import { BaseTestSuite } from './BaseTestSuite'
 
 @TestSuite()
 export class TestRequest extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalRequest() {
 		const request = new RequestData({

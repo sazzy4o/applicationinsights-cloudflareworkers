@@ -2,9 +2,6 @@ import {
 	TestSuite, Test,
 	expect,
 } from 'testyts'
-import { ApplicationInsights } from '../src/ApplicationInsights'
-import { BaseTestSuite } from './BaseTestSuite'
-import { AvailabilityData } from '../src'
 import { ApplicationInsightsConnection } from '../src/ApplicationInsightsConnection'
 
 @TestSuite()

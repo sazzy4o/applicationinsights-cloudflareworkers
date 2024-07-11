@@ -13,15 +13,11 @@ export class BaseTestSuite {
 	public successResultString : string
 
 	constructor() {
-		if (!process.env.AI_IKEY) {
-			throw new Error('No instrumentation key set in environment')
-		}
-
 		this.appInsights = new ApplicationInsights({
 			context: {
 				'ai.operation.id': 'f523edf9-30dc-4ca7-8d37-6bfc2ed287d7',
 			},
-			connection: ApplicationInsightsConnection.fromConnectionString(`InstrumentationKey=${process.env.AI_IKEY};`),
+			connection: ApplicationInsightsConnection.fromConnectionString('InstrumentationKey=yourinstrumentationkey;'),
 		})
 		this.successResultString = '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
 	}

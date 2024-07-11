@@ -7,8 +7,6 @@ import { RemoteDependencyData } from '../src'
 
 @TestSuite()
 export class TestDependency extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalRemoteDependency() {
 		const request = new RemoteDependencyData({

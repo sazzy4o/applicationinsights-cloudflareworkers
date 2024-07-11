@@ -7,8 +7,6 @@ import { MessageData, SeverityLevel } from '../src'
 
 @TestSuite()
 export class TestMessage extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalMessage() {
 		const request = new MessageData({

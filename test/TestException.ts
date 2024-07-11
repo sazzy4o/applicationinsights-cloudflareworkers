@@ -7,8 +7,6 @@ import { ExceptionData, SeverityLevel } from '../src'
 
 @TestSuite()
 export class TestException extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalException() {
 		const request = new ExceptionData({

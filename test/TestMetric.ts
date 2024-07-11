@@ -7,8 +7,6 @@ import { MetricData, DataPoint, DataPointType } from '../src'
 
 @TestSuite()
 export class TestMetric extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalMetric() {
 		const request = new MetricData({

@@ -7,8 +7,6 @@ import { EventData } from '../src'
 
 @TestSuite()
 export class TestEvent extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalEvent() {
 		const request = new EventData({

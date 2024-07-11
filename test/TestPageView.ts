@@ -7,8 +7,6 @@ import { PageViewPerfData } from '../src'
 
 @TestSuite()
 export class TestPageView extends BaseTestSuite {
-	public appInsights: ApplicationInsights
-
 	@Test()
 	async testMinimalPageViewPerf() {
 		const request = new PageViewPerfData({
