@@ -1,6 +1,6 @@
 {
 	"name": "applicationinsights-cloudflareworkers-modern",
-	"version": "0.2.13",
+	"version": "0.2.14",
 	"description": "",
 	"main": "./dist/cjs/src/index.js",
 	"module": "./dist/mjs/src/index.mjs",

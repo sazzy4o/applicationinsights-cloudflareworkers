@@ -1,5 +1,5 @@
 export { ApplicationInsights, ApplicationInsightsOptions } from './ApplicationInsights'
-
+export { ApplicationInsightsConnection } from './ApplicationInsightsConnection'
 export { DataSanitizer } from './DataSanitizer'
 
 export { AvailabilityData } from './types/AvailabilityData'
