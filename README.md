@@ -1,7 +1,5 @@
 # Application Insights Cloudflareworkers
 
-***This is a fork that adds rudimentary connection string support***
-
 Note: Still a work in progress. This package might still have breaking changes
 
 Provides application insights functionality in cloudflare workers
@@ -36,7 +34,7 @@ module.exports = {
 ```
 
 #### Alternative 2
-Change `mainFields` setting (with my cause issues with other dependencies)
+Change `mainFields` setting (may cause issues with other dependencies)
 
 ```js
 module.exports = {

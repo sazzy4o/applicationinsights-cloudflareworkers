@@ -51,6 +51,4 @@ export class ApplicationInsights {
 			body: JSON.stringify(this.envelopes),
 		})
 	}
-
-	// Function to parse the connection string
 }

@@ -1,6 +1,6 @@
 {
-	"name": "applicationinsights-cloudflareworkers-modern",
-	"version": "0.2.14",
+	"name": "applicationinsights-cloudflareworkers",
+	"version": "0.3.0",
 	"description": "",
 	"main": "./dist/cjs/src/index.js",
 	"module": "./dist/mjs/src/index.mjs",
@@ -15,19 +15,19 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/H-Finch-404/applicationinsights-cloudflareworkers.git"
+		"url": "git+https://github.com/sazzy4o/applicationinsights-cloudflareworkers.git"
 	},
 	"keywords": [
 		"cloudflareworkers",
 		"applicationinsights",
 		"cloudflare"
 	],
-	"author": "Wietse.DeKoninck",
-	"license": "ISC",
+	"author": "Spencer von der Ohe",
+	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/H-Finch-404/applicationinsights-cloudflareworkers/issues"
+		"url": "https://github.com/sazzy4o/applicationinsights-cloudflareworkers/issues"
 	},
-	"homepage": "https://github.com/H-Finch-404/applicationinsights-cloudflareworkers#readme",
+	"homepage": "https://github.com/sazzy4o/applicationinsights-cloudflareworkers#readme",
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.7.0",
 		"@typescript-eslint/parser": "2.15.0",
