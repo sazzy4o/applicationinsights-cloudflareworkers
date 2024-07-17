@@ -49,7 +49,7 @@ module.exports = {
 
 Sample code:
 ```ts
-import { ApplicationInsights, RequestData } from 'applicationinsights-cloudflareworkers'
+import { ApplicationInsights, RequestData, ApplicationInsightsConnection } from 'applicationinsights-cloudflareworkers'
 
 const requestTest = new RequestData({
     name: 'Test',
@@ -67,7 +67,7 @@ const ai = new ApplicationInsights({
     context: {
         'ai.operation.id': 'testid',
     },
-    instrumentationKey: 'a08f3f2d-9884-4437-b6ec-c835d3d58d82', // Replace with your own instrumentationKey
+    connection: ApplicationInsightsConnection.fromConnectionString('InstrumentationKey=yourinstrumentationkey;'),
 })
 
 // Pass in AvailabilityData, EventData, ExceptionData, MessageData, MetricData, PageViewPerfData, RemoteDependencyData or RequestData
